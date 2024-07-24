@@ -4,7 +4,7 @@
 
 [context.production.environment]
   NODE_ENV = "production"
-  PHP_VERSION = "7.4"  # Specifica la versione di PHP, se necessario
+  PHP_VERSION = "8.1"
 
 [build.environment]
   COMPOSER_FLAGS = "--no-dev"
