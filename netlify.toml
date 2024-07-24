@@ -1,0 +1,10 @@
+[build]
+  command = "npm install && npm run build && composer install --no-dev && php artisan config:cache && php artisan route:cache && php artisan view:cache"
+  publish = "public"
+
+[context.production.environment]
+  NODE_ENV = "production"
+  PHP_VERSION = "7.4"  # Specifica la versione di PHP, se necessario
+
+[build.environment]
+  COMPOSER_FLAGS = "--no-dev"
