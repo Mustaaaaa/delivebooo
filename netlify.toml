@@ -1,6 +1,6 @@
 [build]
-  command = "npm install && npm run build && composer install --no-dev && php artisan config:cache && php artisan route:cache && php artisan view:cache"
-  publish = "public"
+  command = "cd final-proj-frontend && npm install && npm run build && cd ../final-proj-backend && composer install --no-dev && php artisan config:cache && php artisan route:cache && php artisan view:cache"
+  publish = "final-proj-frontend/dist"  # Modifica questa linea se la directory di output di Vue.js è diversa
 
 [context.production.environment]
   NODE_ENV = "production"
@@ -8,3 +8,4 @@
 
 [build.environment]
   COMPOSER_FLAGS = "--no-dev"
+
